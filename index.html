@@ -1,0 +1,1288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amaizing Bridges .
+</title>
+ <link rel="icon" href="https://media.istockphoto.com/id/1136437406/photo/san-francisco-skyline-with-oakland-bay-bridge-at-sunset-california-usa.jpg?s=612x612&w=0&k=20&c=JVBBZT2uquZbfY0njYHv8vkLfatoM4COJc-lX5QKYpE=">
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background: #000;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* ===== HEADER ===== */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 55px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  z-index: 100;
+  background: transparent;
+  transition: 0.3s;
+}
+header.scrolled {
+  background: rgba(0, 0, 0, 0.9);
+}
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+  font-family: 'Brush Script MT', cursive;
+}
+.logo span {
+  color: #f7c600;
+  font-family: 'Brush Script MT', cursive;
+}
+
+/* ===== NAV ===== */
+nav {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  font-family: "Inter", sans-serif;
+  letter-spacing: 1px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: #f7c600;
+  transition: 0.3s ease;
+}
+nav a:hover::after {
+  width: 100%;
+}
+nav a:hover,
+nav a.active {
+  color: #f7c600;
+}
+.menu {
+  display: none;
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer;
+}
+.close {
+  display: none;
+}
+
+/* ===== HERO SECTION ===== */
+/* ===== HERO SECTION (VIDEO BACKGROUND) ===== */
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero video.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(65%);
+}
+
+.hero .content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+/* ===== FAST FULL TEXT ANIMATION ===== */
+.hero h1 {
+  font-size: 52px;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-shadow:
+    0 0 8px rgba(4, 4, 4, 0.8),
+    0 0 16px rgba(46, 46, 46, 0.6),
+    0 0 32px rgba(53, 53, 53, 0.4);
+  color: rgb(255, 255, 255);
+  -webkit-text-stroke: 1.1px rgb(255, 255, 255);
+}
+
+@keyframes textSwitch {
+  0%, 25% { content: "EXPLORE THE ADVENTURE"; }
+  26%, 50% { content: "DISCOVER NEW PLACES"; }
+  51%, 75% { content: "MAKE MEMORIES FOREVER"; } 
+  76%, 100% { content: "EXPLORE THE ADVENTURE"; } 
+}
+
+.hero h1::after {
+  content: "EXPLORE THE ADVENTURE";
+  animation: textSwitch 4s infinite;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: 0px 0;
+  color: #ffffff;
+  opacity: 0.9;
+  font-weight: 500;
+}
+
+/* ===== BUTTON ===== */
+.btn {
+  background: #eabf10;
+  color: #000;
+  padding: 12px 28px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: "Inter", sans-serif;
+  transition: all 0.3s ease;
+  margin-top: 25px;
+  box-shadow: 0 0 15px rgba(247, 198, 0, 0.4);
+}
+.btn:hover {
+  background: #fff;
+  color: #000;
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 0 25px rgba(247, 198, 0, 0.8);
+}
+.btn:active {
+  transform: scale(0.95);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:900px) {
+  .menu { display: block; }
+  nav {
+    position: fixed;
+    top: 0;
+    right: -70%;
+    width: 50%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.85);
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+    padding: 70px 25px;
+    transition: 0.3s;
+  }
+  nav.active { right: 0; }
+  .close {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 26px;
+    color: #fff;
+    cursor: pointer;
+  }
+}
+
+
+
+
+body {
+    background: #ffffff;
+    color: #fff;
+    text-align: center;
+}
+
+h2 {
+    color: #f7c600;
+    margin: 20px 0;
+    font-size: 30px;
+}
+
+/* CONTAINER */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* CARD STYLES */
+.card {
+    background: #111;
+    width: 270px;
+  
+    display: inline-block;
+    margin: 16px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 8px #000;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* IMAGE INSIDE CARD */
+.card img {
+
+    width: 100%;          /* card ke width ke hisaab se adjust ho */
+    height: 270px;       /* image height fix ya adjust kar sakte ho */
+    object-fit: cover;    /* image crop hone ke bajaye properly fit ho */
+    display: block;
+}
+
+/* CARD CONTENT */
+.card h2 {
+    color: #f7c600;
+    margin: 10px 0 5px;
+     font-size: 25px; 
+}
+
+.card p {
+    font-size: 14px;
+    color: #ccc;
+    padding: 0 10px 10px;
+    margin-bottom: 10px;
+}
+
+/* BUTTON */
+.btn {
+    display: inline-block;
+    background: transparent;
+    border: 2px solid rgb(255, 255, 255);
+    color: #ffffff;
+    padding: 10px 12px;
+    margin-bottom: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.btn:hover {
+    background: #fff;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 600px) {
+    .card {
+        width: 90%;
+    }
+}
+
+
+/* CARDS LONG OFF */
+
+
+
+
+
+/* img gallary on */
+.gallery-container {
+  display: flex;
+  /* padding: 90px; */
+  flex-wrap: wrap;
+  text-align: center;
+  /* justify-content: center; */
+  gap: 20px; /* spacing between images */
+}
+
+.gallery-item {
+  flex: 1 1 calc(25% - 20px); /* 4 images per row with gap */
+  max-width: 25%;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 250px; /* badi image height */
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05); /* hover effect for zoom */
+}
+
+/* Responsive for tablets */
+@media (max-width: 992px) {
+  .gallery-item {
+    flex: 1 1 calc(50% - 20px); /* 2 images per row */
+    max-width: 50%;
+  }
+}
+
+/* Responsive for mobiles */
+@media (max-width: 600px) {
+  .gallery-item {
+    flex: 1 1 100%; /* 1 image per row */
+    max-width: 100%;
+  }
+
+  .gallery-item img {
+    height: 200px; /* thodi chhoti height mobile ke liye */
+  }
+}
+ /* img gallary offf */
+
+
+
+
+
+/* ===== CONTACT FORM ON ===== */
+.contain {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+#contact {
+  background: #f7f7f7;
+  padding: 50px 20px;
+  color: #000;
+}
+#contact h2 {
+  color: #f7c600;
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 38PX;
+}
+#contact p {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+
+/* Form + Map wrapper */
+.contact-wrapp {
+  display: flex;
+  gap: 30px;
+  justify-content: left;
+  align-items: flex-start;
+  text-align: left;
+  flex-wrap: wrap;
+}
+
+/* Form Styles */
+#contact form {
+  flex: 1;
+  min-width: 300px; /* prevent too small on small screens */
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+#contact label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+#contact input,
+#contact select,
+#contact textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 15px;
+  width: 100%;
+  box-sizing: border-box;
+}
+#contact input:focus,
+#contact select:focus,
+#contact textarea:focus {
+  outline: none;
+  border-color: #f7c600;
+}
+#contact button {
+  padding: 12px;
+  background: #f7c600;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+#contact button:hover {
+  transform: translateY(-3px);
+}
+
+/* Map */
+.contact-map {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+  height: 490PX;
+  display: flex;
+  justify-content: center;
+}
+.contact-map img {
+  width: 100%;
+  border-radius: 10px;
+  border: 2px solid #f7c600;
+  object-fit: cover;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .contact-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact-map {
+    margin-top: 20px;
+  }
+}
+/* ===== CONTACT FORM OFF===== */
+
+
+  
+
+
+/* feed back on */
+ .feedback-sectio {
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 30px;
+      background: #fff7eb;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+    .feedback-sectio h2 {
+      text-align: center;
+      color: #333;
+    }
+    .feedback-sectio p {
+      text-align: center;
+      color: #555;
+    }
+    .feedback-sectio label {
+      text-align: left;
+      display: block;
+      margin: 10px 0 5px;
+      font-weight: bold;
+      color: #000000;
+    }
+    .feedback-sectio input,
+    .feedback-sectio select,
+    .feedback-sectio textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+    .feedback-sectio button {
+      width: 100%;
+      padding: 12px;
+      background-color: #ffc400;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .feedback-sectio button:hover {
+      background-color: #000000;
+    }
+/* /* feed back off */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer {
+      background-color: #111;
+      padding: 30px 20px;
+      text-align: center;
+      color: #bbb;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .social-icons a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background-color: #ffffff; /* pure black circle */
+      border: 2px solid #333;
+      box-sizing: border-box;
+      transition: background-color 0.3s, border-color 0.3s;
+      text-decoration: none;
+    }
+
+    .social-icons a:hover {
+      background-color: #ffc400;
+      border-color: #000000;
+    }
+
+    .social-icons img {
+      width: 24px;
+      height: 24px;
+      filter: brightness(1) invert(1); /* white logos on black */
+      transition: filter 0.3s;
+    }
+
+    .social-icons a:hover img {
+      filter: brightness(0) invert(0); /* colored or original on hover */
+    }
+
+    .footer-nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .footer-nav a {
+      color: #bbb;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    .footer-nav a:hover {
+      color: #ff9500;
+      text-decoration: underline;
+    }
+
+    .footer-copy {
+      font-size: 14px;
+      color: #666;
+    }
+
+    /* Responsive */
+    @media (max-width: 480px) {
+      .social-icons {
+        gap: 15px;
+      }
+      .footer-nav {
+        gap: 15px;
+        font-size: 14px;
+      }
+    }
+
+
+
+
+    /* About on */
+    .containe { max-width: 1100px; margin: 0 auto; padding: 20px; margin-left: 20px;}
+h1, h2 { color: #f7c600; text-align: center; margin-bottom: 20px;font-size: 40px; }
+
+/* About Section */
+.about-sectio {
+       
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    
+    gap: 20px;
+    padding: 30px 0;
+    flex-direction: row-reverse; /* Image on right */
+}
+
+.about-imag {
+    flex: 0 0 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-imag img {
+    width: 100%;
+    max-width: 300px;
+    aspect-ratio: 1/1;
+    border-radius: 50%; /* perfect circle */
+    border: 2px solid #f7c600;
+    object-fit: cover;
+    display: block;
+}
+
+.about-conten {
+    flex: 1;
+    min-width: 250px;
+    padding: 0 10px;
+}
+
+.about-conten p {
+    margin-bottom: 15px;
+    font-size: 16px;
+  
+    color: #000;
+    /* text-indent: 30px; */
+    text-align: justify; /* Align text both left and right */
+    text-justify: inter-word; /* Optional: improves spacing in some browsers */
+
+}
+
+.about-conten strong {
+    color: #f7c600;
+}
+
+
+.about-sectio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    padding: 30px 0;
+    flex-direction: row-reverse; /* Image on right */
+}
+
+/* Image ko thoda left karna */
+.about-imag {
+    flex: 0 0 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -30px; /* 👈 thoda left shift */
+}
+
+/* Text ko thoda right karna aur width chhoti */
+.about-conten {
+    flex: 1;
+    min-width: 250px;
+    padding: 0 10px;
+    max-width: 600px; /* 👈 text block chhota kar diya */
+    margin-right: 30px; /* 👈 thoda right shift */
+}
+
+/* Text styling same */
+.about-conten p {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #000;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.about-conten strong {
+    color: #f7c600;
+}
+
+/* Responsive me sab normal rahe */
+@media (max-width: 768px) {
+    .about-sectio {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-imag {
+        margin-left: 0; /* reset for small screens */
+    }
+    .about-conten {
+        margin-right: 0;
+        max-width: 100%;
+    }
+   
+}
+
+
+/* Team Section */
+.team-sec {
+    padding: 30px 0;
+    text-align: center;
+  
+}
+
+.team-car {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 95px;
+    justify-content: center;
+    gap: 20px;
+   
+    
+}
+
+.car {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s;
+    border: 1px solid #636363;
+}
+
+.car img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #f7c600;
+    margin-bottom: 15px;
+}
+
+.car h3 { color: #f7c600; margin-bottom: 5px; }
+.car p { color: #101010; font-size: 14px; }
+
+/* Hover effect - only lift, no color change */
+.car:hover {      
+    transform: translateY(-5px);
+}
+
+/* Responsive */
+@media(max-width:900px){
+
+    .team-car {
+        flex-direction: column;
+        align-items: center;
+           margin-LEFT: 90px;
+    }
+  }
+ 
+
+/* Tablet screens ke liye (768px tak) */
+@media (max-width: 768px) {
+  .team-car {
+    margin-left: 40px;
+  }
+}
+
+/* Mobile screens ke liye (480px tak) */
+@media (max-width: 480px) {
+  .team-car {
+    margin-left: 0;
+    margin-right: 0;
+    align-items: center;
+  }
+}
+
+
+
+
+
+/* ===== TESTIMONIAL SECTION ===== */
+.testimonial-section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
+  text-align: left;
+}
+
+.testimonial-section h3 {
+  color: #ff8c00;
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.testimonial-section h2 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  line-height: 1.3;
+}
+
+.testimonial-section h2 span {
+  color: #f7c600;
+}
+
+/* Cards Grid */
+.testimonial-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* Single Card */
+.testimonial-card {
+  background: #fffaf5;
+  border-radius: 20px;
+  border: 1px solid #f7c600;
+  padding: 30px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Stars */
+.stars {
+  color: #ff8c00;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+/* Text */
+.testimonial-card p {
+  color: #333;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  text-align: justify;
+}
+
+/* Profile */
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.profile img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #f7c600;
+}
+
+.profile-info h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.profile-info span {
+  font-size: 14px;
+  color: #ff8c00;
+}
+
+/* Responsive Grid */
+@media (max-width: 1000px) {
+  .testimonial-section h2 {
+    font-size: 32px;
+  }
+  .testimonial-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .testimonial-cards {
+    grid-template-columns: 1fr;
+  }
+}
+    /* About off */
+</style>
+</head>
+<body>
+
+<header id="header">
+  <div class="logo">Amaizing<span> Bridges </span></div>
+  <div class="menu" id="menu">☰</div>
+  <nav id="nav">
+    <div class="close" id="close">✕</div>
+    <a href="#home" class="active">HOME</a>
+    <a href="#hom">ABOUT</a>
+    <a href="#CATEGORIES">CATEGORIES</a>
+    <a href="#gallery">GALLERY</a>
+    <a href="#transport">SERVICES</a>
+    <a href="#contact">CONTACT</a>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <video autoplay muted loop playsinline class="bg-video">
+    <source src="bridges.mp4" type="video/mp4">
+  </video>
+
+  <div class="content">
+    <h1></h1>
+    <p>Discover new places, enjoy nature, and make memories forever.</p>
+    <a href="#hom" class="btn">GET STARTED</a>
+  </div>
+</section>
+
+<BR>
+<BR>
+   <div class="containe">
+
+    <!-- <h1>About Us</h1> -->
+    
+    <div class="about-sectio" id="hom">
+        <div class="about-imag">
+            <img src="https://img.freepik.com/free-photo/white-brown-hanging-bridge-surrounded-by-green-trees-daytime_413556-13.jpg?semt=ais_hybrid&w=740&q=80" alt="Amazing Bridges">
+        </div>
+        <div class="about-conten">
+            <!-- <h1>About Us</h1> -->
+            <h1 style="text-align: left; color: #ffd000;">About Us</h1>
+            <p>Welcome to <strong>Amazing Bridges</strong> – your ultimate destination to explore the most iconic bridges from around the world. Our team is passionate about architecture, history, and engineering marvels.</p>
+            <p>Our mission is to educate, inspire, and provide accurate information about bridges — covering their history, design, structure, and fascinating facts. Whether you’re a student, researcher, or bridge enthusiast, our platform aims to offer a seamless and engaging experience.</p>
+            <p>We combine high-quality visuals with well-researched content to make learning both fun and informative. Your curiosity about bridges is our priority!</p>
+        </div>
+    </div>
+
+    <h2>Meet Our Team</h2>
+    <div class="team-sec">
+        <div class="team-car">
+            <div class="car">
+                <img src="https://img.freepik.com/free-photo/emotions-people-concept-headshot-serious-looking-handsome-man-with-beard-looking-confident-determined_1258-26730.jpg?semt=ais_hybrid&w=740&q=80" alt="Team Member 1">
+                <h3>Alex Johnson</h3>
+                <p>Front-end Developer & UI/UX Designer</p>
+            </div>
+            <div class="car">
+                <img src="https://img.freepik.com/free-photo/portrait-white-man-isolated_53876-40306.jpg?semt=ais_hybrid&w=740&q=80" alt="Team Member 2">
+                <h3>Maria Smith</h3>
+                <p>Content Writer & Researcher</p>
+            </div>
+            <div class="car">
+                <img src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Team Member 3">
+                <h3>David Lee</h3>
+                <p>Backend Developer & Database Expert</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<!-- <h2></h2> -->
+ <!-- <button id="CATEGORIES">Click Me</button> -->
+
+<h2 id="CATEGORIES" style="color: #f7c600;font-size: 30px">Bridge Categories</h2>
+<div class="container">
+  
+
+  <div class="card">
+    <img src="https://i.insider.com/626eec590983640018c09ffe?width=700">
+    <h2>Longest Bridges</h2>
+    <p>World’s longest like Danyang–Kunshan Bridge in China.</p>
+    <!-- <a href="#" class="btn">Read More</a> -->
+  </div>
+
+  <div class="card">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Huajiang_Canyon_Bridge3.JPG/330px-Huajiang_Canyon_Bridge3.JPG">
+    <h2>Tallest Bridges</h2>
+    <p>Millau Viaduct in France stands tallest across the valley.</p>
+    <!-- <a href="#" class="btn">Read More</a> -->
+  </div>
+
+  <div class="card">
+    <img src="https://c02.purpledshub.com/uploads/sites/41/2021/06/GettyImages-1076692176-f7505eb.jpg">
+    <h2>Highest Bridges</h2>
+    <p>Duge Bridge in China is the highest in the world.</p>
+    <!-- <a href="#" class="btn">Read More</a> -->
+  </div>
+
+  <div class="card">
+    <img src="https://media.assettype.com/outlooktraveller%2Fimport%2Foutlooktraveller%2Fpublic%2Fuploads%2Farticles%2Fsee%2FBridges_in_India.jpg?w=480&auto=format%2Ccompress&fit=max">
+    <h2>Oldest Bridges</h2>
+    <p>Ponte Vecchio in Italy — a bridge full of history.</p>
+    <!-- <a href="#" class="btn">Read More</a> -->
+  </div>
+
+</div>
+
+
+
+<script>
+const header=document.getElementById("header");
+window.addEventListener("scroll",()=>header.classList.toggle("scrolled",window.scrollY>50));
+
+const menu=document.getElementById("menu"),
+      nav=document.getElementById("nav"),
+      close=document.getElementById("close");
+menu.onclick=()=>nav.classList.add("active");
+close.onclick=()=>nav.classList.remove("active");
+
+// close menu when clicking link
+document.querySelectorAll("nav a").forEach(a=>{
+  a.onclick=()=>nav.classList.remove("active");
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+<!-- /* img gallary on */ -->
+<section id="gallery" style="padding:50px 20px; background:1; text-align:center;">
+  <h2 style="color:#f7c600; font-size:36px; margin-bottom:40px;">Amazing Bridges Gallery</h2>
+  <div class="gallery-container">
+    
+    <div class="gallery-item"><img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/32/dd/10/golden-gate-bridge.jpg?w=500&h=500&s=1" alt="Bridge 1"></div>
+    <div class="gallery-item"><img src="https://d34vm3j4h7f97z.cloudfront.net/optimized/4X/3/d/7/3d7d15bac4a432865e826144da858c0009307eca_2_690x388.jpeg" alt="Bridge 2"></div>
+    <div class="gallery-item"><img src="https://static.independent.co.uk/2023/06/21/13/iStock-531301781.jpg" alt="Bridge 3"></div>
+    <div class="gallery-item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7e5Fi94zpdJ44TkvyLaxioHu6BS3WlAonAxxWx8m57bVQHhtKd_hOaqZt2ad0G6T-jQo&usqp=CAU" alt="Bridge 4"></div>
+    <div class="gallery-item"><img src="https://img.freepik.com/premium-photo/wooden-bridge-canal-small-village_76000-2358.jpg?w=360" alt="Bridge 5"></div>
+    <div class="gallery-item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4LfrXlD043jMnTr285ORHPhKNJmeoWZsKiA&s" alt="Bridge 6"></div>
+    <div class="gallery-item"><img src="https://image.jimcdn.com/app/cms/image/transf/none/path/sa6549607c78f5c11/image/i2315587306b3cf7c/version/1453636329/image.jpg" alt="Bridge 7"></div>
+    <div class="gallery-item"><img src="https://images.stockcake.com/public/8/2/1/821b7bd3-c5d3-4fa2-83be-401533ba1c35_large/misty-forest-bridge-stockcake.jpg" alt="Bridge 8"></div>
+  </div>
+</section>
+
+ <!-- /* img gallary offf */ -->
+
+
+<!-- about on -->
+ 
+<!-- about off -->
+
+ <!-- TRANSPORT / ADVERTISEMENT SECTION -->
+<!-- TRANSPORT / ADVERTISEMENT SECTION -->
+<section id="transport" style="padding:50px 20px; text-align:center; background:#ffffff;">
+  <h3 style="color:#f7c600; margin-bottom:40px; font-size:31px;">Travel & Transport Services</h2>
+  <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:30px;">
+    
+    <div style="background:#111; width:350px; border-radius:12px; overflow:hidden; box-shadow:0 0 15px #000; transition:0.3s; ">
+      <img src="https://www.shutterstock.com/image-photo/tourist-buses-lined-parking-600nw-2418222873.jpg" alt="Bus Service" style="width:100%; height:220px; object-fit:cover;">
+      <h3 style="color:#f7c600; margin:15px; font-size:24px;">City Bus Services</h3>
+      <p style="color:#ccc; padding:0 15px 15px; font-size:16px;">Affordable bus tickets for local and intercity travel with flexible timings.</p>
+      <a href="#contact" style="display:inline-block; background:#f7c600; color:#000; padding:10px 20px; margin:15px; border-radius:6px; font-weight:bold; text-decoration:none;">Book Now</a>
+    </div>
+    
+    <div style="background:#111; width:350px; border-radius:12px; overflow:hidden; box-shadow:0 0 15px #000; transition:0.3s;">
+      <img src="https://i.ytimg.com/vi/Bt9tpiAmTs8/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLATtzXGfX-BXaYxNszBUmNBiwNRWw" alt="Flight Service" style="width:100%; height:220px; object-fit:cover;">
+      <h3 style="color:#f7c600; margin:15px; font-size:24px;">Flight Services</h3>
+      <p style="color:#ccc; padding:0 15px 15px; font-size:16px;">Domestic & international flights to reach bridges quickly and comfortably.</p>
+      <a href="#contact" style="display:inline-block; background:#f7c600; color:#000; padding:10px 20px; margin:15px; border-radius:6px; font-weight:bold; text-decoration:none;">Book Flight</a>
+    </div>
+
+    <div style="background:#111; width:350px; border-radius:12px; overflow:hidden; box-shadow:0 0 15px #000; transition:0.3s;">
+      <img src="https://media.istockphoto.com/id/466506979/photo/indian-passenger-train.jpg?s=612x612&w=0&k=20&c=AKcMyvqsam93AnADQaK4hzAMI9bdWOVd8tKoF5Sf10M=" alt="Train Service" style="width:100%; height:220px; object-fit:cover;">
+      <h3 style="color:#f7c600; margin:15px; font-size:24px;">Train Services</h3>
+      <p style="color:#ccc; padding:0 15px 15px; font-size:16px;">Fast and scenic train routes to explore famous bridges with comfort.</p>
+      <a href="#contact" style="display:inline-block; background:#f7c600; color:#000; padding:10px 20px; margin:15px; border-radius:6px; font-weight:bold; text-decoration:none;">Book Train</a>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+<!-- feed back on -->
+  <section id="feedback" class="feedback-sectio">
+    <h2>Feedback Form</h2>
+    <p>We’d love to hear your thoughts and suggestions!</p>
+
+    <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+      <label for="rating">How would you rate our website?</label>
+      <select id="rating" name="rating" required>
+        <option value="">Select</option>
+        <option value="Excellent">Excellent</option>
+        <option value="Good">Good</option>
+        <option value="Average">Average</option>
+        <option value="Poor">Poor</option>
+      </select>
+
+      <label for="message">Your Feedback:</label>
+      <textarea id="message" name="message" placeholder="Share your thoughts..." rows="5" required></textarea>
+
+      <button type="submit">Submit Feedback</button>
+    </form>
+  </section>
+<!-- feed back off -->
+
+<!-- ===== DOWNLOAD ===== -->
+<section id="download" style="padding:60px 20px; background:#111; text-align:center;">
+  <h2 style="color:#f7c600; font-size:32px; margin-bottom:20px;">Download Bridge Information</h2>
+  <p style="color:#ccc; max-width:600px; margin:0 auto 30px;">
+    Download detailed history and information of the world’s most amazing bridges.
+  </p>
+  <a href="bridges pdf.pdf" download
+     style="background:#f7c600; color:#000; padding:14px 35px;
+            text-decoration:none; font-weight:bold; border-radius:6px;
+            font-size:18px; transition:0.3s;"> Download PDF</a>
+</section>
+
+
+
+<!-- ===== CONTACT ===== -->
+<section id="contact">
+  <div class="contain">
+    <h2>Contact Us</h2>
+    <p>Get in touch with us. Reach out to our team. Send us a message.</p>
+
+    <div class="contact-wrapp">
+      <!-- Form -->
+      <form>
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+
+        <label for="transport">Transport</label>
+        <select id="transport" required>
+          <option value="">-- Select Transport --</option>
+          <option value="Train">Train</option>
+          <option value="Bus">Bus</option>
+          <option value="Plane">Plane</option>
+        </select>
+
+        <label for="message">Message</label>
+        <textarea id="message" rows="4" placeholder="Your message..." required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+
+      <!-- Map Image -->
+      <div class="contact-map">
+        <img src="https://media.hswstatic.com/eyJidWNrZXQiOiJjb250ZW50Lmhzd3N0YXRpYy5jb20iLCJrZXkiOiJnaWZcL21hcHMuanBnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjo4Mjh9fX0=" alt="Map">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<br>
+<section class="testimonial-section">
+  <h3>Testimonial</h3>
+  <h2>Real <span>Feedback</span> From<br>Our Client</h2>
+
+  <div class="testimonial-cards">
+    <!-- Card 1 -->
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p>Bridges are wonderful creations that make travel easier and faster.
+They stand as a symbol of strength, beauty, and human intelligence.
+Each bridge connects not just lands, but also hearts and dreams..</p>
+      <div class="profile">
+        <img src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Amora Lin">
+        <div class="profile-info">
+          <h4>Amora Lin</h4>
+          <span>Client</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p>The writer has perfectly praised the importance of bridges.
+Calling them symbols of dreams and unity is very thoughtful.
+It shows how bridges connect people in more ways than one..</p>
+      <div class="profile">
+        <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Jessica Jane">
+        <div class="profile-info">
+          <h4>Jessica Jane</h4>
+          <span>Client</span>
+        </div>
+      </div>
+    </div>
+
+    
+
+    <!-- Card 6 -->
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p>Wow, this paragraph really shows how amazing bridges are!
+I like the way it describes bridges as both strong and beautiful.
+It makes me appreciate the hard work of engineers and builders..</p>
+      <div class="profile">
+        <img src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Michael Brown">
+        <div class="profile-info">
+          <h4>Michael Brown</h4>
+          <span>Client</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<br>
+
+
+
+
+<!-- footer on -->
+ <footer class="footer">
+  <div class="social-icons">
+    <a href="#" aria-label="Facebook" title="Facebook">
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/facebook-new.png" alt="Facebook"/>
+    </a>
+    <a href="#" aria-label="Instagram" title="Instagram">
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" alt="Instagram"/>
+    </a>
+    <a href="#" aria-label="Twitter" title="Twitter">
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/twitter.png" alt="Twitter"/>
+    </a>
+    <!-- <a href="#" aria-label="Google Plus" title="Google Plus">
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/google-plus.png" alt="Google Plus"/>
+    </a> -->
+    <a href="#" aria-label="YouTube" title="YouTube">
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/youtube-play.png" alt="YouTube"/>
+    </a>
+  </div>
+
+  <nav class="footer-nav" aria-label="Footer Navigation">
+    <a href="#home" class="active">HOME</a>
+    <a href="#hom">ABOUT</a>
+     <a href="#CATEGORIES">CATEGORIES</a>
+    <a href="#gallery">GALLARY</a>
+    <a href="#transport">SERVICES</a>
+   
+    <a href="#contact">CONTACT</a>
+  </nav>
+
+  <div class="footer-copy">
+     ©2025; Designed by <strong>sufyan</strong>
+  </div>
+</footer>
+
+</body>
+</html>
